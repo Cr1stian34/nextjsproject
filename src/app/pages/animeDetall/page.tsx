@@ -39,13 +39,19 @@ const AnimeDetalls = () => {
 
   return (
     <div className="w-full h-[100%] bg-black py-5">
-      <div className="w-[80%] h-auto mx-auto py-10 mt-5 mb-5 flex gap-2 p-5 rounded-md bg-slate-900 text-white">
-        <div className="w-[auto] h-[300px]">
+      <div className="w-[80%] lg:flex lg:flex-row h-auto mx-auto py-10 mt-5 mb-5 gap-2 p-5 rounded-md bg-slate-900 text-white">
+        <div className="w-auto h-auto mx-auto flex justify-center lg:w-[30%] lg:h-[300px]">
           <Image src={anime.images.jpg.image_url} />
         </div>
-        <div className="w-[80%]">
-          <h2 className=" text-center">{anime.title}</h2>
-          <p className=" text-sm">{anime.synopsis}</p>
+        <div className="w-auto lg:max-w-[70%]">
+          <div>
+            <h2 className=" text-pretty text-lg my-3 text-center font-bold tracking-wide">
+              {anime.title}
+            </h2>
+            <p className="text-sm truncate lg:whitespace-normal lg:overflow-visible lg:text-clip">
+              {anime.synopsis}
+            </p>
+          </div>
           <div className="mt-5">
             <p className=" text-sm">Rating: {anime.rating}</p>
             <p className=" text-sm">Popularity: {anime.popularity}</p>
@@ -53,8 +59,7 @@ const AnimeDetalls = () => {
           <div className="flex justify-center items-center">
             {anime.trailer && (
               <iframe
-                width="560"
-                height="315"
+                className="w-[250px] h-[250px] mt-3 md:w-[400px] md:h-[300px] lg:w-[560px] lg:h-[315px]"
                 src={anime.trailer.embed_url}
                 title={anime.title + " Trailer"}
                 frameBorder="0"
