@@ -38,8 +38,8 @@ const AnimeDetalls = () => {
   console.log("a =>", anime);
 
   return (
-    <div className="w-hull bg-black h-[100%]">
-      <div className="w-[80%] h-auto mx-auto py-10 flex gap-2 p-5 rounded-md bg-slate-900 text-white">
+    <div className="w-full h-[100%] bg-black py-5">
+      <div className="w-[80%] h-auto mx-auto py-10 mt-5 mb-5 flex gap-2 p-5 rounded-md bg-slate-900 text-white">
         <div className="w-[auto] h-[300px]">
           <Image src={anime.images.jpg.image_url} />
         </div>
