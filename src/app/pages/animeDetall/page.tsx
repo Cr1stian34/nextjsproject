@@ -35,7 +35,7 @@ const AnimeDetalls = () => {
     return <LoaderCommon />;
   }
 
-  console.log("a =>", anime);
+  // console.log("a =>", anime);
 
   return (
     <div className="w-full h-[100%] bg-black py-5">
